@@ -121,3 +121,31 @@ POSITION: 120
 2026-06-03 15:48:36.860 +05:00 [INF] Hosting environment: Development
 2026-06-03 15:48:36.863 +05:00 [INF] Content root path: C:\Users\user\Desktop\Week 9\Day 1\HomeTask\WebApi
 2026-06-03 15:50:25.580 +05:00 [INF] Application is shutting down...
+2026-06-03 17:52:11.541 +05:00 [INF] Now listening on: http://localhost:5038
+2026-06-03 17:52:11.639 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-03 17:52:11.642 +05:00 [INF] Hosting environment: Development
+2026-06-03 17:52:11.645 +05:00 [INF] Content root path: C:\Users\user\Desktop\Week 9\Day 1\HomeTask\WebApi
+2026-06-03 17:52:21.678 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.html - null null
+2026-06-03 17:52:21.919 +05:00 [INF] HTTP GET /swagger/index.html responded 304 in 152.3448 ms
+2026-06-03 17:52:21.951 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.html - 304 null null 277.247ms
+2026-06-03 17:52:22.016 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui.css - null null
+2026-06-03 17:52:22.016 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.css - null null
+2026-06-03 17:52:22.016 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui-bundle.js - null null
+2026-06-03 17:52:22.016 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-03 17:52:22.016 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.js - null null
+2026-06-03 17:52:22.055 +05:00 [INF] HTTP GET /swagger/index.js responded 304 in 1.4370 ms
+2026-06-03 17:52:22.060 +05:00 [INF] HTTP GET /swagger/swagger-ui.css responded 304 in 37.6724 ms
+2026-06-03 17:52:22.060 +05:00 [INF] HTTP GET /swagger/index.css responded 304 in 34.9898 ms
+2026-06-03 17:52:22.060 +05:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 304 in 11.3987 ms
+2026-06-03 17:52:22.062 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.js - 304 null null 45.8081ms
+2026-06-03 17:52:22.062 +05:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 304 in 26.1209 ms
+2026-06-03 17:52:22.065 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui.css - 304 null null 49.7163ms
+2026-06-03 17:52:22.071 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.css - 304 null null 56.0984ms
+2026-06-03 17:52:22.075 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui-standalone-preset.js - 304 null null 58.3338ms
+2026-06-03 17:52:22.086 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui-bundle.js - 304 null null 70.1851ms
+2026-06-03 17:52:22.341 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - null null
+2026-06-03 17:52:22.346 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/favicon-32x32.png - null null
+2026-06-03 17:52:22.352 +05:00 [INF] HTTP GET /swagger/favicon-32x32.png responded 304 in 0.4601 ms
+2026-06-03 17:52:22.358 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/favicon-32x32.png - 304 null null 11.1564ms
+2026-06-03 17:52:22.656 +05:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 311.9197 ms
+2026-06-03 17:52:22.662 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 321.1095ms

@@ -13,3 +13,4 @@ C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Infrastructure\obj\Debug\net10.0\Inf
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Infrastructure\obj\Debug\net10.0\refint\Infrastructure.dll
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Infrastructure\obj\Debug\net10.0\Infrastructure.pdb
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Infrastructure\obj\Debug\net10.0\ref\Infrastructure.dll
+C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Infrastructure\obj\Debug\net10.0\Infrastructure.sourcelink.json

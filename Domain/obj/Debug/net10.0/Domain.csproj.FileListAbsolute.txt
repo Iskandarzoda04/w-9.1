@@ -9,3 +9,4 @@ C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Domain\obj\Debug\net10.0\Domain.dll
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Domain\obj\Debug\net10.0\refint\Domain.dll
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Domain\obj\Debug\net10.0\Domain.pdb
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Domain\obj\Debug\net10.0\ref\Domain.dll
+C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Domain\obj\Debug\net10.0\Domain.sourcelink.json

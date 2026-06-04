@@ -193,3 +193,4 @@ C:\Users\user\Desktop\Week 9\Day 1\HomeTask\WebApi\obj\Debug\net10.0\refint\WebA
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\WebApi\obj\Debug\net10.0\WebApi.pdb
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\WebApi\obj\Debug\net10.0\WebApi.genruntimeconfig.cache
 C:\Users\user\Desktop\Week 9\Day 1\HomeTask\WebApi\obj\Debug\net10.0\ref\WebApi.dll
+C:\Users\user\Desktop\Week 9\Day 1\HomeTask\WebApi\obj\Debug\net10.0\WebApi.sourcelink.json

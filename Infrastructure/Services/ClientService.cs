@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Infrastructure.Persistence.DataContext;
 using Infrastructure.DTOs.Clients;
 using Infrastructure.Interfaces;
+using Infrastructure.Result;
 
 
 namespace Infrastructure.Services;
@@ -112,33 +113,49 @@ public class ClientService : IClientService
         }
     }
 
-    public async Task<Result<List<CreateClientDto>>> GetAllAsync()
-    {
-        try
-        {
-            var client = await _context.Clients
-                .Select(c => new CreateClientDto
-                {
-                    id = c.Id,
-                    FirstName = c.FirstName,
-                    LastName = c.LastName,
-                    Email = c.Email,
-                    PhoneNumber = c.PhoneNumber,
-                    BirthDate = c.BirthDate,
-                    CreatedAt = c.CreatedAt,
-                    IsActive = c.IsActive
-                }).ToListAsync();
+public async Task<PagedResult<CreateClientDto>> GetAllAsync(GetClientFilterDto dto)
+{
+    var query = _context.Clients.AsQueryable();
 
-            return Result<List<CreateClientDto>>.Ok(client);
-        }
-        catch (Exception)
-        {
-            _logger.LogError("An error while getting Clients");
-            return Result<List<CreateClientDto>>.Fail("An error while getting Clients");
-        }
-    }
+  
+    if (!string.IsNullOrWhiteSpace(dto.FirstName))
+        query = query.Where(c => c.FirstName.Contains(dto.FirstName));
 
-    public async Task<Result<CreateClientDto>> GetByIdAsync(Guid id)
+    if (!string.IsNullOrWhiteSpace(dto.LastName))
+        query = query.Where(c => c.LastName.Contains(dto.LastName));
+
+    if (!string.IsNullOrWhiteSpace(dto.Email))
+        query = query.Where(c => c.Email.Contains(dto.Email));
+
+
+    var totalCount = await query.CountAsync();
+
+    
+    var clients = await query
+        .Skip((dto.Page - 1) * dto.PageSize)
+        .Take(dto.PageSize)
+        .Select(c => new CreateClientDto
+        {
+            id = c.Id,
+            FirstName = c.FirstName,
+            LastName = c.LastName,
+            Email = c.Email,
+            PhoneNumber = c.PhoneNumber,
+            BirthDate = c.BirthDate,
+            CreatedAt = c.CreatedAt,
+            IsActive = c.IsActive
+        })
+        .ToListAsync();
+
+    return PagedResult<CreateClientDto>.Ok(
+        clients,
+        totalCount,
+        dto.Page,
+        dto.PageSize
+    );
+}
+
+ public async Task<Result<CreateClientDto>> GetByIdAsync(Guid id)
     {
         try
         {
@@ -170,6 +187,7 @@ public class ClientService : IClientService
             return Result<CreateClientDto>.Fail("An error while getting by id");
         }
     }
+
 
     public async Task<Result<CreateClientDto>> UpdateAsync(Guid id, UpdateClientDto dto)
     {

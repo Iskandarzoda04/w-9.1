@@ -28,14 +28,10 @@ public class ClientsController : BaseController
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllAsync()
-    {
-        var result = await _client.GetAllAsync();
-
-        return result.IsSuccess
-            ? Ok(result.Data)
-            : HandleError(result);
-    }
+public async Task<IActionResult> GetAllAsync([FromQuery] GetClientFilterDto dto)
+{
+    return Ok(await _client.GetAllAsync(dto));
+}
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetByIdAsync(Guid id)
