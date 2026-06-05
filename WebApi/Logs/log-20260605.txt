@@ -1,0 +1,199 @@
+2026-06-05 15:17:43.157 +05:00 [INF] Now listening on: http://localhost:5038
+2026-06-05 15:17:43.210 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 15:17:43.212 +05:00 [INF] Hosting environment: Development
+2026-06-05 15:17:43.214 +05:00 [INF] Content root path: C:\Users\user\Desktop\Week 9\Day 1\HomeTask\WebApi
+2026-06-05 15:17:59.169 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.html - null null
+2026-06-05 15:17:59.421 +05:00 [INF] HTTP GET /swagger/index.html responded 304 in 151.2130 ms
+2026-06-05 15:17:59.446 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.html - 304 null null 282.9966ms
+2026-06-05 15:17:59.515 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui.css - null null
+2026-06-05 15:17:59.526 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.css - null null
+2026-06-05 15:17:59.529 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui-bundle.js - null null
+2026-06-05 15:17:59.529 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-05 15:17:59.529 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.js - null null
+2026-06-05 15:17:59.566 +05:00 [INF] HTTP GET /swagger/index.js responded 304 in 0.7596 ms
+2026-06-05 15:17:59.568 +05:00 [INF] HTTP GET /swagger/index.css responded 304 in 31.3259 ms
+2026-06-05 15:17:59.568 +05:00 [INF] HTTP GET /swagger/swagger-ui.css responded 304 in 45.3867 ms
+2026-06-05 15:17:59.568 +05:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 304 in 18.3080 ms
+2026-06-05 15:17:59.569 +05:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 304 in 29.8265 ms
+2026-06-05 15:17:59.571 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.js - 304 null null 41.8494ms
+2026-06-05 15:17:59.580 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.css - 304 null null 54.198ms
+2026-06-05 15:17:59.583 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui.css - 304 null null 68.4171ms
+2026-06-05 15:17:59.586 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui-standalone-preset.js - 304 null null 57.2424ms
+2026-06-05 15:17:59.592 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/swagger-ui-bundle.js - 304 null null 63.3277ms
+2026-06-05 15:17:59.714 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - null null
+2026-06-05 15:18:00.014 +05:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 296.2164 ms
+2026-06-05 15:18:00.053 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 339.9305ms
+2026-06-05 15:18:07.010 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/api/analytics/active-clients - null null
+2026-06-05 15:18:07.067 +05:00 [WRN] Failed to determine the https port for redirect.
+2026-06-05 15:18:07.091 +05:00 [INF] Executing endpoint 'API.Controllers.AnalyticsController.GetActiveClients (WebApi)'
+2026-06-05 15:18:07.157 +05:00 [INF] Route matched with {action = "GetActiveClients", controller = "Analytics"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveClients() on controller API.Controllers.AnalyticsController (WebApi).
+2026-06-05 15:18:11.649 +05:00 [ERR] Failed executing DbCommand (114ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."FirstName", c."LastName", c."Email"
+FROM "Clients" AS c
+WHERE c."IsActive"
+2026-06-05 15:18:11.884 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Infrastructure.Persistence.DataContext.AppDbContext'.
+Npgsql.PostgresException (0x80004005): 42P01: отношение "Clients" не существует
+
+POSITION: 61
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: 42P01
+    MessageText: отношение "Clients" не существует
+    Position: 61
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+Npgsql.PostgresException (0x80004005): 42P01: отношение "Clients" не существует
+
+POSITION: 61
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: 42P01
+    MessageText: отношение "Clients" не существует
+    Position: 61
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-05 15:18:12.069 +05:00 [ERR] Error while getting active clients
+Npgsql.PostgresException (0x80004005): 42P01: отношение "Clients" не существует
+
+POSITION: 61
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Services.AnallyticService.GetActiveClientsAsync() in C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Infrastructure\Services\AnallyticService.cs:line 61
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: 42P01
+    MessageText: отношение "Clients" не существует
+    Position: 61
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-05 15:18:12.352 +05:00 [INF] Executing OkObjectResult, writing value of type 'Infrastructure.Results.Result`1[[System.Collections.Generic.List`1[[Infrastructure.DTOs.Analytics.ActiveClientDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-05 15:18:12.500 +05:00 [INF] Executed action API.Controllers.AnalyticsController.GetActiveClients (WebApi) in 5326.6966ms
+2026-06-05 15:18:12.519 +05:00 [INF] Executed endpoint 'API.Controllers.AnalyticsController.GetActiveClients (WebApi)'
+2026-06-05 15:18:12.546 +05:00 [INF] HTTP GET /api/analytics/active-clients responded 200 in 5519.3286 ms
+2026-06-05 15:18:12.621 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/api/analytics/active-clients - 200 null application/json; charset=utf-8 5610.8149ms
+2026-06-05 15:18:31.996 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5038/api/analytics/total-fees - null null
+2026-06-05 15:18:32.010 +05:00 [INF] Executing endpoint 'API.Controllers.AnalyticsController.GetTotalFees (WebApi)'
+2026-06-05 15:18:32.036 +05:00 [INF] Route matched with {action = "GetTotalFees", controller = "Analytics"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTotalFees() on controller API.Controllers.AnalyticsController (WebApi).
+2026-06-05 15:18:32.218 +05:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(sum(t."Fee"), 0.0)
+FROM "Transactions" AS t
+WHERE t."Status" = 1
+2026-06-05 15:18:32.231 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Infrastructure.Persistence.DataContext.AppDbContext'.
+Npgsql.PostgresException (0x80004005): 42P01: отношение "Transactions" не существует
+
+POSITION: 42
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: 42P01
+    MessageText: отношение "Transactions" не существует
+    Position: 42
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+Npgsql.PostgresException (0x80004005): 42P01: отношение "Transactions" не существует
+
+POSITION: 42
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: 42P01
+    MessageText: отношение "Transactions" не существует
+    Position: 42
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-05 15:18:32.259 +05:00 [ERR] Error while getting total fees
+Npgsql.PostgresException (0x80004005): 42P01: отношение "Transactions" не существует
+
+POSITION: 42
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Infrastructure.Services.AnallyticService.GetTotalFeesAsync() in C:\Users\user\Desktop\Week 9\Day 1\HomeTask\Infrastructure\Services\AnallyticService.cs:line 293
+  Exception data:
+    Severity: ОШИБКА
+    SqlState: 42P01
+    MessageText: отношение "Transactions" не существует
+    Position: 42
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-05 15:18:32.289 +05:00 [INF] Executing OkObjectResult, writing value of type 'Infrastructure.Results.Result`1[[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-05 15:18:32.308 +05:00 [INF] Executed action API.Controllers.AnalyticsController.GetTotalFees (WebApi) in 256.4926ms
+2026-06-05 15:18:32.315 +05:00 [INF] Executed endpoint 'API.Controllers.AnalyticsController.GetTotalFees (WebApi)'
+2026-06-05 15:18:32.318 +05:00 [INF] HTTP GET /api/analytics/total-fees responded 200 in 308.8819 ms
+2026-06-05 15:18:32.324 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5038/api/analytics/total-fees - 200 null application/json; charset=utf-8 328.2847ms
+2026-06-05 15:18:44.683 +05:00 [INF] Application is shutting down...
